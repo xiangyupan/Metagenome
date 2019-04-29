@@ -2,9 +2,9 @@ Pipeline of analysing metagenomic data-beta
 -----------------------------------------   
 General pipeline to obtain the gene abundence matrix and to annotate taxaonomic/function database
 ###Binning    
-`ln -s /lustre/sdb/lingen/workB/01.meta/03.Assembly/Hay_Cecum-1.contigs
-/lustre/sdb/taoye/mybin/Module_Meta/bwa index Hay_Cecum-1.contigs 
-/lustre/sdb/taoye/mybin/Module_Meta/samtools faidx Hay_Cecum-1.contigs  
+`ln -s /lustre/sdb/lingen/workB/01.meta/03.Assembly/Hay_Cecum-1.contigs   
+/lustre/sdb/taoye/mybin/Module_Meta/bwa index Hay_Cecum-1.contigs     
+/lustre/sdb/taoye/mybin/Module_Meta/samtools faidx Hay_Cecum-1.contigs      
 /lustre/sdb/taoye/mybin/Module_Meta/bwa mem -t 40 -M -R '@RG\tID:Hay_Cecum-1\tSM:Hay_Cecum-1\tLB:Hay_Cecum-1\tPL:Illumina\tPI:500' Hay_Cecum-1.contigs /lustre/sdb/lingen/workB/01.meta/01.QC/Hay_Cecum-1.clip.1.fq.gz /lustre/sdb/lingen/workB/01.meta/01.QC/Hay_Cecum-1.clip.2.fq.gz | /lustre/sdb/taoye/mybin/Module_Meta/samtools view -bS -t Hay_Cecum-1.contigs.fai - > Hay_Cecum-1.bam 
 /lustre/sdb/taoye/mybin/Module_Meta/samtools sort -m 6960000000 Hay_Cecum-1.bam Hay_Cecum-1.sort  
 /lustre/sdb/taoye/mybin/Module_Meta/samtools index Hay_Cecum-1.sort.bam 
