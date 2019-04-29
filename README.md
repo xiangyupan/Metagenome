@@ -1,7 +1,7 @@
 Pipeline of analysing metagenomic data-beta
 -----------------------------------------   
-General pipeline to obtain the gene abundence matrix and to annotate taxaonomic/function database
-###Binning    
+General pipeline to obtain the gene abundence matrix and to annotate taxaonomic/function database   
+###Binning pipeline      
 `ln -s /lustre/sdb/lingen/workB/01.meta/03.Assembly/Hay_Cecum-1.contigs`   
 `/lustre/sdb/taoye/mybin/Module_Meta/bwa index Hay_Cecum-1.contigs`     
 `/lustre/sdb/taoye/mybin/Module_Meta/samtools faidx Hay_Cecum-1.contigs`      
